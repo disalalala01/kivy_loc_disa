@@ -1,0 +1,110 @@
+
+
+
+<ItemLabel@Label>:
+    font_size: '25sp'
+    halign: 'left'
+    valign: 'middle'
+    text_size: self.size
+
+
+
+<Container>:
+    rows: 3
+
+    text_input: text_input
+    ip: ip
+    host: host
+    city: city
+    reg: reg
+    loc: loc
+    country: country
+    tzone: tzone
+
+
+    AnchorLayout:
+        anchor_y: 'top'
+        size_hint: 1, 0.15
+
+        TextInput:
+            id: text_input
+            font_size: '45sp'
+            multiline: False
+            input_type: 'number'
+            input_filter: 'int'
+
+    GridLayout:
+        cols: 2
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: [30, 0, 0, 0]
+
+            ItemLabel:
+                text: 'Ip'
+
+            ItemLabel:
+                text: 'Город'
+
+            ItemLabel:
+                text: 'Регион'
+
+            ItemLabel:
+                text: 'Страна'
+
+            ItemLabel:
+                text: 'Координаты'
+
+            ItemLabel:
+                text: 'Сервер'
+
+            ItemLabel:
+                text: 'Часовой Пояс'
+
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 0.5, 1
+
+            ItemLabel:
+                id: ip
+                text: 'NO '
+
+            ItemLabel:
+                id: city
+                text: 'NO'
+
+
+            ItemLabel:
+                id: reg
+                text: 'NO'
+
+            ItemLabel:
+                id: country
+                text: 'NO'
+
+
+            ItemLabel:
+                id: loc
+                text: 'NO'
+
+            ItemLabel:
+                id: host
+                text: 'NO'
+
+            ItemLabel:
+                id: tzone      
+                text: 'NO'
+
+
+    BoxLayout:
+        size_hint: 0.9, 0.15
+        padding: [30, 0, 30, 20]
+
+        Button:
+            size_hint: 1, 0.9
+            text: 'GO!'
+            font_size: 40
+
+            on_release:
+                root.calculate()
