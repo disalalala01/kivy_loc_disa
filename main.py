@@ -1,9 +1,5 @@
-from kivy.app import App
-from kivy.uix.button import Button
 from kivy.uix.gridlayout import GridLayout
-from kivy.properties import ObjectProperty
 from kivy.core.window import Window
-# from kivy.network.urlrequest import UrlRequest
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy_garden.mapview import MapView
 
@@ -58,7 +54,7 @@ def get_data(number):
             "country": 'PLEASE',
             "loc": 'TRY',
             "org": 'ANOTHER',
-            "timezone": 'PHONE',
+            "timezone": 'NUMBER',
             "readme": 'NUMBER'
         }
 
